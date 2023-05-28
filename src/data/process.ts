@@ -236,7 +236,7 @@ export const processList10 = [
     description: 'Etiam porta malesuada magna mollis euismod consectetur leo elit.'
   },
   {
-    id: 1,
+    id: 3,
     Icon: DeliveryBox,
     title: '3. Finalize Product',
     description: 'Etiam porta malesuada magna mollis euismod consectetur leo elit.'

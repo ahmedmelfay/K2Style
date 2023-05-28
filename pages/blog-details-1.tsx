@@ -2,71 +2,37 @@ import { NextPage } from 'next';
 import { Fragment } from 'react';
 // -------- custom component -------- //
 import { Navbar } from 'components/blocks/navbar';
-import { Footer8 } from 'components/blocks/footer';
+import { Footer12 } from 'components/blocks/footer';
 import PageProgress from 'components/common/PageProgress';
 import NextLink from 'components/reuseable/links/NextLink';
 import BlogDetailsTemplate from 'components/common/BlogDetailsTemplate';
 
 const BlogDetailsOne: NextPage = () => {
   return (
-    <Fragment>
+    <div className='page-frame bg-pale-primary'>
       <PageProgress />
 
       {/* ========== header section ========== */}
-      <header className="wrapper bg-soft-primary">
-        <Navbar search button={<NextLink title="Contact" href="#" className="btn btn-sm btn-primary rounded-pill" />} />
+      <header className="wrapper">
+        <Navbar
+          language
+          stickyBox={false}
+          logoAlt="logo-light"
+          navClassName="navbar navbar-expand-lg classic transparent position-absolute navbar-dark" />
       </header>
 
-      <main className="content-wrapper">
+      <main className="content-wrapper" style={{marginTop:'-1.25rem'}}>
         {/* ========== title section ========== */}
-        <section className="wrapper bg-soft-primary">
-          <div className="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+        <section
+          className="wrapper image-wrapper bg-image bg-overlay text-white"
+          style={{ backgroundImage: 'url(/img/photos/bg5.jpg)', borderRadius: '1rem',overflow:'hidden' }}
+        >
+          <div className="container pt-18 pb-15 pt-md-20 pb-md-19 text-center">
             <div className="row">
               <div className="col-md-10 col-xl-8 mx-auto">
                 <div className="post-header">
-                  <div className="post-category text-line">
-                    <NextLink href="#" className="hover" title="Teamwork" />
-                  </div>
 
-                  <h1 className="display-1 mb-4">Commodo Dolor Bibendum Parturient Cursus Mollis</h1>
-
-                  <ul className="post-meta mb-5">
-                    <li className="post-date">
-                      <i className="uil uil-calendar-alt" />
-                      <span>5 Jul 2022</span>
-                    </li>
-
-                    <li className="post-author">
-                      <i className="uil uil-user" />
-                      <NextLink href="#" className="text-reset" title={<span>By Sandbox</span>} />
-                    </li>
-
-                    <li className="post-comments">
-                      <i className="uil uil-comment" />
-                      <NextLink
-                        href="#"
-                        className="text-reset"
-                        title={
-                          <Fragment>
-                            3 <span>Comments</span>
-                          </Fragment>
-                        }
-                      />
-                    </li>
-
-                    <li className="post-likes">
-                      <i className="uil uil-heart-alt" />
-                      <NextLink
-                        href="#"
-                        className="text-reset"
-                        title={
-                          <Fragment>
-                            3 <span>Likes</span>
-                          </Fragment>
-                        }
-                      />
-                    </li>
-                  </ul>
+                  <h1 className="display-1 mb-4 text-white">Commodo Dolor Bibendum Parturient Cursus Mollis</h1>
                 </div>
               </div>
             </div>
@@ -88,8 +54,8 @@ const BlogDetailsOne: NextPage = () => {
       </main>
 
       {/* ========== footer section ========== */}
-      <Footer8 />
-    </Fragment>
+      <Footer12 />
+    </div>
   );
 };
 

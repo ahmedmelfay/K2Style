@@ -24,7 +24,6 @@ const Demo20: NextPage = () => {
       {/* ========== header ========== */}
       <header className="wrapper">
         <Navbar
-          info
           language
           stickyBox={false}
           logoAlt="logo-light"

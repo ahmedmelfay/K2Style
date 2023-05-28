@@ -20,6 +20,7 @@ import 'glightbox/dist/css/glightbox.css';
 import 'plugins/scrollcue/scrollCue.css';
 // Bootstrap and custom scss
 import 'assets/scss/style.scss';
+import { NextIntlProvider } from 'next-intl';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
@@ -86,11 +87,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sandbox - Modern & Multipurpose NextJS Template</title>
       </Head>
-
-      <ThemeProvider>
-        {/* <div className="page-loader" /> */}
-        {loading ? <div className="page-loader" /> : <Component {...pageProps} />}
-      </ThemeProvider>
+      <NextIntlProvider messages={pageProps.messages}>
+        <ThemeProvider>
+          {/* <div className="page-loader" /> */}
+          {loading ? <div className="page-loader" /> : <Component {...pageProps} />}
+        </ThemeProvider>
+      </NextIntlProvider>
     </Fragment>
   );
 }

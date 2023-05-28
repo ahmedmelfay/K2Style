@@ -1,7 +1,9 @@
-import { FC, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { FC, useEffect, useState } from 'react';
 
 // language list
-const supportLanguage = ['En', 'Bn', 'Es', 'De'];
+const supportLanguage = ['en', 'ar', 'fr'];
 
 const Language: FC = () => {
   const [language, setLanguage] = useState(supportLanguage[0]);
@@ -21,9 +23,9 @@ const Language: FC = () => {
       <ul className="dropdown-menu">
         {supportLanguage.map((lang) => (
           <li className="nav-item" key={lang}>
-            <button className="dropdown-item" onClick={() => setLanguage(lang)}>
+            <Link className="dropdown-item" href='' locale={lang} onClick={() => setLanguage(lang)}>
               {lang}
-            </button>
+            </Link>
           </li>
         ))}
       </ul>
