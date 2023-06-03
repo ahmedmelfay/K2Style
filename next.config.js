@@ -4,8 +4,9 @@ const nextConfig = {
   reactStrictMode: false,
   transpilePackages: ['countup.js', 'react-countup'],
   i18n: {
-    locales: ['en', 'ar', 'fr'],
-    defaultLocale: 'ar'
+    locales: ['ar', 'en', 'fr'],
+    defaultLocale: 'ar',
+    localeDetection: false
   }
 };
 

@@ -23965,6 +23965,7 @@ mark {
 @media (min-width: 768px) {
   .page-frame {
     padding: 1.25rem;
+    padding-bottom: 0;
   }
   .page-frame section,
   .page-frame footer,

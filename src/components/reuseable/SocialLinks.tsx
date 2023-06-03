@@ -5,18 +5,16 @@ type SocialLinksProps = { className?: string };
 // ========================================================
 
 const links = [
-  { id: 1, icon: 'uil uil-twitter', url: 'https://twitter.com/uilibofficial' },
-  { id: 2, icon: 'uil uil-facebook-f', url: 'https://facebook.com/uiLibOfficial/' },
-  { id: 3, icon: 'uil uil-dribbble', url: '#' },
-  { id: 4, icon: 'uil uil-instagram', url: 'https://www.instagram.com/uilibofficial/' },
-  { id: 5, icon: 'uil uil-youtube', url: 'https://www.youtube.com/channel/UCsIyD-TSO1wQFz-n2Y4i3Rg' }
+  { id: 1, icon: 'uil uil-facebook-f', url: 'https://www.facebook.com/profile.php?id=100023570276369' },
+  { id: 2, icon: 'uil uil-youtube', url: 'https://www.youtube.com/@ktschannel5665' },
+  { id: 3, icon: 'uil uil-envelope', url: 'mailto:keytosteelco@gmail.com' }
 ];
 
 const SocialLinks: FC<SocialLinksProps> = ({ className = 'nav social social-white mt-4' }) => {
   return (
     <nav className={className}>
       {links.map(({ id, icon, url }) => (
-        <a href={url} key={id} target="_blank" rel="noreferrer">
+        <a href={url} key={id} target={icon.includes('uil-envelope') ? '_self' : '_blank'} rel="noreferrer">
           <i className={icon} />
         </a>
       ))}

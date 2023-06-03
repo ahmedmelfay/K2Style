@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { FC, useEffect, useState } from 'react';
 
 // language list
-const supportLanguage = ['en', 'ar', 'fr'];
+const supportLanguage = ['ar', 'en', 'fr'];
 
 const Language: FC = () => {
   const [language, setLanguage] = useState(supportLanguage[0]);
