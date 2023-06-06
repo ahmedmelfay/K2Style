@@ -33,22 +33,6 @@ const ProjectDetailsContent: FC<ProjectDetailsContentProps> = ({
               Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
             </p>
           </div>
-
-          <div className="col-md-2 ms-auto">
-            <ul className="list-unstyled">
-              <li>
-                <h5 className="mb-1">Date</h5>
-                <p>17 May 2018</p>
-              </li>
-
-              <li>
-                <h5 className="mb-1">Client Name</h5>
-                <p>Cool House</p>
-              </li>
-            </ul>
-
-            <NextLink title="See Project" href="#" className="more hover" />
-          </div>
         </div>
       </div>
     </div>

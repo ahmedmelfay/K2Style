@@ -49,7 +49,7 @@ const Footers: NextPage = () => {
 
       <Block id={8}>
         <div className="pb-13 pb-md-15">
-          <All.Footer8 />
+          <All.Footer />
         </div>
       </Block>
 
@@ -73,7 +73,7 @@ const Footers: NextPage = () => {
 
       <Block id={12}>
         <div className="pb-13 pb-md-15">
-          <All.Footer12 />
+          <All.Footer />
         </div>
       </Block>
 

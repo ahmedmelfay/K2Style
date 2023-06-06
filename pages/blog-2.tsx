@@ -1,8 +1,8 @@
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import { Fragment } from 'react';
 // -------- custom component -------- //
 import { Navbar } from 'components/blocks/navbar';
-import { Footer8 } from 'components/blocks/footer';
+import { Footer } from 'components/blocks/footer';
 import PageProgress from 'components/common/PageProgress';
 import BlogTemplate from 'components/common/BlogTemplate';
 import BlogSidebar from 'components/reuseable/BlogSidebar';
@@ -57,9 +57,17 @@ const BlogTwo: NextPage = () => {
       </main>
 
       {/* ========== footer section ========== */}
-      <Footer8 />
+      <Footer />
     </Fragment>
   );
 };
 
 export default BlogTwo;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {
+      messages: (await import(`../public/locales/${context.locale}.json`)).default
+    }
+  };
+};

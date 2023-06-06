@@ -26,6 +26,7 @@ import {
   documentionNavigation
 } from 'data/navigation';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 // ===================================================================
 type NavbarProps = {
@@ -68,7 +69,12 @@ const Navbar: FC<NavbarProps> = (props) => {
   const headerContent = (
     <Fragment>
       <div className="navbar-brand w-100">
-        <NextLink href="/" title={<img alt="logo" src={`/img/${logo}.png`} srcSet={`/img/${logo}@2x.png 2x`} />} />
+        <NextLink
+          href="/"
+          title={
+            <Image alt="logo" width={100} height={64} src="/img/llooggoo.webp" style={{ width: 100, height: 'auto' }} />
+          }
+        />
       </div>
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -79,11 +85,11 @@ const Navbar: FC<NavbarProps> = (props) => {
 
         <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
           <ul className="navbar-nav">
-
             {/*  ===================== products nav item  ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title={t('products')} className="nav-link dropdown-toggle" />
-
+              <Link href="/products" className="nav-link">
+                {t('Products')}
+              </Link>
               <ul className="dropdown-menu">
                 {pages.map(({ id, title, children }) => {
                   return (
@@ -99,24 +105,22 @@ const Navbar: FC<NavbarProps> = (props) => {
             </li>
 
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Pages" className="nav-link dropdown-toggle" />
-
-              <ul className="dropdown-menu">
-                {pages.map(({ id, title, children }) => {
-                  return (
-                    <li className="dropdown dropdown-submenu dropend" key={id}>
-                      <DropdownToggleLink title={title} />
-                      <ul className="dropdown-menu">{renderLinks(children)}</ul>
-                    </li>
-                  );
-                })}
-
-                <ListItemLink href="/pricing" title="Pricing" linkClassName="dropdown-item" />
-              </ul>
+              <Link href="/media" className="nav-link">
+                {t('Media')}
+              </Link>
+            </li>
+            <li className="nav-item dropdown">
+              <Link href="/development" className="nav-link">
+                {t('Development')}
+              </Link>
+            </li>
+            <li className="nav-item dropdown">
+              <Link href="/contact-us" className="nav-link">
+                {t('Contact Us')}
+              </Link>
             </li>
 
-            {/* ===================== projects nav item  ===================== */}
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <DropdownToggleLink title="Projects" className="nav-link dropdown-toggle" />
 
               <div className="dropdown-menu dropdown-lg">
@@ -131,7 +135,6 @@ const Navbar: FC<NavbarProps> = (props) => {
               </div>
             </li>
 
-            {/* ===================== blog nav item ===================== */}
             <li className="nav-item dropdown">
               <DropdownToggleLink title="Blog" className="nav-link dropdown-toggle" />
 
@@ -148,15 +151,19 @@ const Navbar: FC<NavbarProps> = (props) => {
                   return <ListItemLink key={id} href={url} title={title} linkClassName="dropdown-item" />;
                 })}
               </ul>
-            </li>
+            </li> */}
           </ul>
 
           {/* ============= show contact info in the small device sidebar ============= */}
           <div className="offcanvas-footer d-lg-none">
             <div>
-              <NextLink title="info@email.com" className="link-inverse" href="mailto:first.last@email.com" />
+              <NextLink title="keytosteelco@gmail.com" className="link-inverse" href="mailto:keytosteelco@gmail.com" />
               <br />
-              <NextLink href="tel:0123456789" title="00 (123) 456 78 90" />
+              <NextLink href="tel:+201141816000" title="+2 011 41816 000" />
+              <br />
+              <NextLink href="tel:+201092839561" title="+2 010 92839 561" />
+              <br />
+              <NextLink href="tel:+201000943508" title="+2 010 00943 508" />
               <br />
               <SocialLinks />
             </div>

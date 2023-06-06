@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import { Fragment } from 'react';
 // -------- custom hook -------- //
 import useLightBox from 'hooks/useLightBox';
 // -------- custom component -------- //
 import { Navbar } from 'components/blocks/navbar';
-import { Footer8 } from 'components/blocks/footer';
+import { Footer } from 'components/blocks/footer';
 import PageProgress from 'components/common/PageProgress';
 import FigureImage from 'components/reuseable/FigureImage';
 import NextLink from 'components/reuseable/links/NextLink';
@@ -109,9 +109,17 @@ const ProjectDetails: NextPage = () => {
       </main>
 
       {/* ========== footer section ========== */}
-      <Footer8 />
+      <Footer />
     </Fragment>
   );
 };
 
 export default ProjectDetails;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {
+      messages: (await import(`../public/locales/${context.locale}.json`)).default
+    }
+  };
+};

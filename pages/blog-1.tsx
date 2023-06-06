@@ -1,9 +1,9 @@
 import Plyr from 'plyr-react';
 import Image from 'next/image';
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import { Fragment } from 'react';
 // -------- custom component -------- //
-import { Footer8 } from 'components/blocks/footer';
+import { Footer } from 'components/blocks/footer';
 import { Navbar } from 'components/blocks/navbar';
 import { BlogCard2, BlogCard3 } from 'components/reuseable/blog-cards';
 import Carousel from 'components/reuseable/Carousel';
@@ -169,9 +169,17 @@ const BlogOne: NextPage = () => {
       </main>
 
       {/* ========== footer section ========== */}
-      <Footer8 />
+      <Footer />
     </Fragment>
   );
 };
 
 export default BlogOne;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {
+      messages: (await import(`../public/locales/${context.locale}.json`)).default
+    }
+  };
+};

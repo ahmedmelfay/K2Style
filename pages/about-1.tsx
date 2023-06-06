@@ -1,11 +1,11 @@
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import { Fragment } from 'react';
 // -------- custom component -------- //
 import { Team3 } from 'components/blocks/team';
 import { About6 } from 'components/blocks/about';
 import { Facts5 } from 'components/blocks/facts';
 import { Navbar } from 'components/blocks/navbar';
-import { Footer8 } from 'components/blocks/footer';
+import { Footer } from 'components/blocks/footer';
 import { Process7 } from 'components/blocks/process';
 import { Contact7 } from 'components/blocks/contact';
 import { Testimonial5 } from 'components/blocks/testimonial';
@@ -68,9 +68,17 @@ const About: NextPage = () => {
       </main>
 
       {/* ========== footer section ========== */}
-      <Footer8 />
+      <Footer />
     </Fragment>
   );
 };
 
 export default About;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {
+      messages: (await import(`../public/locales/${context.locale}.json`)).default
+    }
+  };
+};

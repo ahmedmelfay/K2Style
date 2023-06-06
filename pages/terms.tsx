@@ -1,9 +1,9 @@
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import { FC, Fragment } from 'react';
 import { Element, Link as ScrollLink } from 'react-scroll';
 // -------- custom component -------- //
 import { Navbar } from 'components/blocks/navbar';
-import { Footer8 } from 'components/blocks/footer';
+import { Footer } from 'components/blocks/footer';
 import Breadcrumb from 'components/reuseable/Breadcrumb';
 import PageProgress from 'components/common/PageProgress';
 import NextLink from 'components/reuseable/links/NextLink';
@@ -286,7 +286,7 @@ const Terms: NextPage = () => {
       </main>
 
       {/* ========== footer section ========== */}
-      <Footer8 />
+      <Footer />
     </Fragment>
   );
 };
@@ -309,3 +309,11 @@ const List: FC<{ data: string[] }> = ({ data }) => {
 };
 
 export default Terms;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {
+      messages: (await import(`../public/locales/${context.locale}.json`)).default
+    }
+  };
+};

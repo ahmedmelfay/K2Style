@@ -5,7 +5,7 @@ export default class SandBox extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="shortcut icon" href="/img/favicon.png" type="image/png" />
+          <link rel="shortcut icon" href="/img/llooggoo.webp" />
         </Head>
 
         <body>

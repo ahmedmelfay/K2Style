@@ -1,9 +1,9 @@
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import { Fragment } from 'react';
 // -------- custom component -------- //
 import { Facts3 } from 'components/blocks/facts';
 import { Navbar } from 'components/blocks/navbar';
-import { Footer8 } from 'components/blocks/footer';
+import { Footer } from 'components/blocks/footer';
 import { Banner3 } from 'components/blocks/banner';
 import { Pricing1 } from 'components/blocks/pricing';
 import { Contact3 } from 'components/blocks/contact';
@@ -76,9 +76,17 @@ const Services: NextPage = () => {
       </main>
 
       {/* ========== footer section ========== */}
-      <Footer8 />
+      <Footer />
     </Fragment>
   );
 };
 
 export default Services;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {
+      messages: (await import(`../public/locales/${context.locale}.json`)).default
+    }
+  };
+};

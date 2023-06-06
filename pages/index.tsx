@@ -6,7 +6,7 @@ import { Hero20 } from 'components/blocks/hero';
 import { About21 } from 'components/blocks/about';
 import { Facts14 } from 'components/blocks/facts';
 import { Navbar } from 'components/blocks/navbar';
-import { Footer12 } from 'components/blocks/footer';
+import { Footer } from 'components/blocks/footer';
 import { Clients5 } from 'components/blocks/clients';
 import { Process13 } from 'components/blocks/process';
 import { Services23 } from 'components/blocks/services';
@@ -59,7 +59,7 @@ const Demo20: NextPage = () => {
       </main>
 
       {/* ========== footer section ========== */}
-      <Footer12 />
+      <Footer />
     </div>
   );
 };
@@ -69,8 +69,6 @@ export default Demo20;
 export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
-      // You can get the messages from anywhere you like. The recommended pattern
-      // is to put them in JSON files separated by locale (e.g. `en.json`).
       messages: (await import(`../public/locales/${context.locale}.json`)).default
     }
   };

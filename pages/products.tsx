@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import { Fragment } from 'react';
 // -------- custom component -------- //
 import { Navbar } from 'components/blocks/navbar';
-import { Footer8 } from 'components/blocks/footer';
+import { Footer } from 'components/blocks/footer';
 import Carousel from 'components/reuseable/Carousel';
 import PageProgress from 'components/common/PageProgress';
 import NextLink from 'components/reuseable/links/NextLink';
@@ -30,10 +30,6 @@ const ProjectDetails: NextPage = () => {
             <div className="row">
               <div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
                 <div className="post-header">
-                  <div className="post-category text-line">
-                    <NextLink title="Identity" href="#" className="hover" />
-                  </div>
-
                   <h1 className="display-1 mb-3">Commodo Dolor Bibendum Parturient Cursus Mollis</h1>
                   <p className="lead px-md-12 px-lg-12 px-xl-15 px-xxl-18">
                     Integer posuere erat a ante venenatis dapibus posuere. Maecenas faucibus mollis interdum.
@@ -64,11 +60,6 @@ const ProjectDetails: NextPage = () => {
                         alt="demo"
                         style={{ width: '100%', height: 'auto' }}
                       />
-                      <div className="caption-wrapper p-12">
-                        <div className="caption bg-white rounded px-4 py-3 ms-auto mt-auto animate__animated animate__slideInDown animate__delay-1s">
-                          <h5 className="mb-0">Vivamus sagittis lacus augue</h5>
-                        </div>
-                      </div>
                     </div>
 
                     <div>
@@ -79,11 +70,6 @@ const ProjectDetails: NextPage = () => {
                         alt="demo"
                         style={{ width: '100%', height: 'auto' }}
                       />
-                      <div className="caption-wrapper p-12">
-                        <div className="caption bg-white rounded px-4 py-3 mx-auto mt-auto animate__animated animate__slideInDown animate__delay-1s">
-                          <h5 className="mb-0">Vivamus sagittis lacus augue</h5>
-                        </div>
-                      </div>
                     </div>
 
                     <div>
@@ -94,11 +80,6 @@ const ProjectDetails: NextPage = () => {
                         alt="demo"
                         style={{ width: '100%', height: 'auto' }}
                       />
-                      <div className="caption-wrapper p-12">
-                        <div className="caption bg-white rounded px-4 py-3 mt-auto animate__animated animate__slideInDown animate__delay-1s">
-                          <h5 className="mb-0">Vivamus sagittis lacus augue</h5>
-                        </div>
-                      </div>
                     </div>
                   </Carousel>
                 </div>
@@ -111,13 +92,21 @@ const ProjectDetails: NextPage = () => {
         </section>
 
         {/* ========== navigation section ========== */}
-        <ProjectDetailsNavigation />
+        {/* <ProjectDetailsNavigation /> */}
       </main>
 
       {/* ========== footer section ========== */}
-      <Footer8 />
+      <Footer />
     </Fragment>
   );
 };
 
 export default ProjectDetails;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {
+      messages: (await import(`../public/locales/${context.locale}.json`)).default
+    }
+  };
+};

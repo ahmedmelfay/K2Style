@@ -1,9 +1,13 @@
 const footerNav = [
-  { title: 'About Us', url: '#' },
-  { title: 'Our Story', url: '#' },
-  { title: 'Projects', url: '#' },
-  { title: 'Terms of Use', url: '#' },
-  { title: 'Privacy Policy', url: '#' }
+  // { title: 'About Us', url: '/' },
+  // { title: 'Our Story', url: '#' },
+  // { title: 'Projects', url: '#' },
+  // { title: 'Terms of Use', url: '#' },
+  // { title: 'Privacy Policy', url: '#' }
+  { title: 'Products', url: '/products' },
+  { title: 'Media', url: '/media' },
+  { title: 'Development', url: '/development' },
+  { title: 'Contact Us', url: '/contact-us' }
 ];
 
 export const helps = [
