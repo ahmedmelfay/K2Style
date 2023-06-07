@@ -8,8 +8,13 @@
   "Media": "Media",
   "Development": "Development",
   "Contact Us": "Contact Us",
-  "working-hours":"Working Hours",
-  "schedule":"9:00 AM to 5:00 PM, All week",
+  "working-hours": "Working Hours",
+  "schedule": "9:00 AM to 5:00 PM, All week",
   "engineering-steel": "Engineering Steel",
-  "videos": "Videos"
+  "videos": "Videos",
+  "url-home": "Home",
+  "url-contact": "Contact",
+  "address":"Address",
+  "phone":"Phone",
+  "email":"E-mail"
 }

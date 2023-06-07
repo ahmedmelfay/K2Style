@@ -5,7 +5,7 @@ const nextConfig = {
   transpilePackages: ['countup.js', 'react-countup'],
   i18n: {
     locales: ['ar', 'en', 'fr'],
-    defaultLocale: 'ar',
+    defaultLocale: 'en',
     localeDetection: false
   },
   images: {
