@@ -7,6 +7,21 @@ const nextConfig = {
     locales: ['ar', 'en', 'fr'],
     defaultLocale: 'ar',
     localeDetection: false
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.youtube.com',
+        port: '',
+        // pathname: '/my-bucket/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        port: '',
+      }
+    ]
   }
 };
 

@@ -1,33 +1,36 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import useLightBox from 'hooks/useLightBox';
+import Plyr from 'plyr-react';
 
 // ==============================================================
 type Props = {
   id: number;
-  image: string;
+  video: string;
   title: string;
-  color: string;
-  category: string;
 };
 // ==============================================================
 
-const ProjectCard4: FC<Props> = ({ image, title, color, category }) => {
+const ProjectCard4: FC<Props> = ({ video, title }) => {
+  // if (isVideo)
   return (
-    <div className="card shadow-lg">
-      <figure className="card-img-top" title="Click to see the project">
-        <Link href="#">
-          <Image src={image} width={1300} height={1132} alt="" />
-        </Link>
-      </figure>
+    <>
+      <div className="card shadow-lg" style={{ height: 354 }}>
+        <figure className="card-img-top hover-scale rounded cursor-dark" title={title}>
+          <Plyr
+            options={{ loadSprite: true, clickToPlay: true, ratio: '16:9' }}
+            source={{ type: 'video', sources: [{ src: video, provider: 'youtube' }] }}
+          />
+        </figure>
 
-      <div className="card-body p-7">
-        <div className="post-header">
-          <div className={`post-category text-line mb-2 text-${color}`}>{category}</div>
-          <h3 className="mb-0">{title}</h3>
+        <div className="card-body p-7">
+          <div className="post-header">
+            <h3 className="mb-0">{title}</h3>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

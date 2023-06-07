@@ -48,6 +48,82 @@ export const projects = [
   }
 ];
 
+export const ytVids = [
+  {
+    id: 1,
+    video: 'hKBQfmWw3NU',
+    title: 'م. محمد الجابري يتحدث عن صدأ الحديد في قناة صله السعودية'
+  },
+  {
+    id: 2,
+    video: 'WvFAPOmha4I',
+    title: 'كي تو ستيل في معرض الصلب'
+  },
+  {
+    id: 3,
+    video: 'QZTIg5Uc_EI',
+    title: 'م. محمد الجابري يتحدث عن تفاصيل نشاط الصلب'
+  },
+  {
+    id: 4,
+    video: 'QtmtllFrAII',
+    title: 'م. محمد الجابري يتحدث عن نشاه الحديد في قناه صله السعوديه'
+  },
+  {
+    id: 5,
+    video: 'f3WLPgoRzT0',
+    title: 'لقاء في المعرض مع التليفزيون المصري للباشمهندس محمد الجابري'
+  },
+  {
+    id: 6,
+    video: '3MIGzxlJ0HQ',
+    title: 'م. محمد الجابري يلقي محاضره لطلاب كليه الهندسه'
+  },
+  {
+    id: 7,
+    video: 'oiztn3JM__s',
+    title: 'م. محمد الجابري و special  steel'
+  }
+];
+
+export const mediaPhotos = [
+  {
+    id: 1,
+    src: 'hKBQfmWw3NU',
+    title: 'م. محمد الجابري يتحدث عن صدأ الحديد في قناة صله السعودية'
+  },
+  {
+    id: 2,
+    src: 'WvFAPOmha4I',
+    title: 'كي تو ستيل في معرض الصلب'
+  },
+  {
+    id: 3,
+    src: 'QZTIg5Uc_EI',
+    title: 'م. محمد الجابري يتحدث عن تفاصيل نشاط الصلب'
+  },
+  {
+    id: 4,
+    src: 'QtmtllFrAII',
+    title: 'م. محمد الجابري يتحدث عن نشاه الحديد في قناه صله السعوديه'
+  },
+  {
+    id: 5,
+    src: 'f3WLPgoRzT0',
+    title: 'لقاء في المعرض مع التليفزيون المصري للباشمهندس محمد الجابري'
+  },
+  {
+    id: 6,
+    src: '3MIGzxlJ0HQ',
+    title: 'م. محمد الجابري يلقي محاضره لطلاب كليه الهندسه'
+  },
+  {
+    id: 7,
+    src: 'oiztn3JM__s',
+    title: 'م. محمد الجابري و special  steel'
+  }
+];
+
 export const testimonials = [
   {
     name: 'Coriss Ambady',
