@@ -1,7 +1,9 @@
 import { FC } from 'react';
 import useReplaceMe from 'hooks/useReplaceMe';
 
-const Hero20: FC = () => {
+type Props = { videoSrc?: string; rotations?: string[]; title?: string };
+
+const Hero20: FC<Props> = ({ videoSrc, rotations, title }) => {
   // enable the text rotator animation
   useReplaceMe();
 
@@ -14,21 +16,20 @@ const Hero20: FC = () => {
         playsInline
         // __idm_id__="1187841"
         id="1187841"
-        src="/media/movie2.mp4"
-        poster="/img/photos/movie2.jpg"
+        src={videoSrc ? videoSrc : '/media/home-video.mp4'}
       />
 
       <div className="video-content">
         <div className="container text-center">
           <div className="row">
             <div className="col-lg-8 col-xl-6 text-center text-white mx-auto">
-              <h1 className="display-1 fs-54 text-white mb-5">
-                <span className="rotator-zoom">Rapid Solutions,Innovative Thinking,Top-Notch Support</span>
-              </h1>
+              {rotations ? (
+                <h1 className="display-1 fs-54 text-white mb-5">
+                  <span className="rotator-zoom">{rotations.toString()}</span>
+                </h1>
+              ) : null}
 
-              <p className="lead fs-24 mb-0 mx-xxl-8">
-                We are a digital agency specializing in web design, mobile development and seo optimization.
-              </p>
+              {title ? <p className="lead fs-24 mb-0 mx-xxl-8">{title}</p> : null}
             </div>
           </div>
         </div>

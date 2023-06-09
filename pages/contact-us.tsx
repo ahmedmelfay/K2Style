@@ -4,8 +4,8 @@ import { Navbar } from 'components/blocks/navbar';
 import { Footer } from 'components/blocks/footer';
 import Breadcrumb from 'components/reuseable/Breadcrumb';
 import PageProgress from 'components/common/PageProgress';
-import ContactForm from 'components/common/ContactForm';
-import NextLink from 'components/reuseable/links/NextLink';
+// import ContactForm from 'components/common/ContactForm';
+// import NextLink from 'components/reuseable/links/NextLink';
 import { useTranslations } from 'next-intl';
 // -------- data -------- //
 

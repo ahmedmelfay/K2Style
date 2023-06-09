@@ -33,7 +33,10 @@ const Demo20: NextPage = () => {
       {/* ========== main content ========== */}
       <main className="content-wrapper">
         {/* ========== hero section ========== */}
-        <Hero20 />
+        <Hero20
+          rotations={['Rapid Solutions', 'Innovative Thinking', 'Top-Notch Support']}
+          title="We are a digital agency specializing in web design, mobile development and seo optimization."
+        />
 
         {/* ========== what we do section ========== */}
         <Services23 />

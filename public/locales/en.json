@@ -14,7 +14,13 @@
   "videos": "Videos",
   "url-home": "Home",
   "url-contact": "Contact",
-  "address":"Address",
-  "phone":"Phone",
-  "email":"E-mail"
+  "address": "Address",
+  "phone": "Phone",
+  "email": "E-mail",
+  "dev-title": "Machines used for steel development.",
+  "dev-1-title": "Band saw for cutting large sizes up to 1100 mm circular diameter.",
+  "dev-2-title": "Spectrophotometer for chemically analysing steel elements.",
+  "dev-3-title": "CNC band saw for cutting large numbers at high speed.",
+  "dev-4-title": "Hardness measuring device for steel ores.",
+  "dev-5-title": "Band saw for cutting large sizes up to 1100 mm circular diameter."
 }
