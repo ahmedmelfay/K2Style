@@ -10,7 +10,6 @@ import { Footer } from 'components/blocks/footer';
 import { Clients5 } from 'components/blocks/clients';
 import { Process13 } from 'components/blocks/process';
 import { Services23 } from 'components/blocks/services';
-import { Portfolio11 } from 'components/blocks/portfolio';
 import PageProgress from 'components/common/PageProgress';
 import { useTranslations } from 'next-intl';
 
@@ -48,9 +47,6 @@ const Demo20: NextPage = () => {
         {/* ========== working process section ========== */}
         {/* <Process13 /> */}
 
-        {/* ========== our projects section ========== */}
-        {/* <Portfolio11 /> */}
-
         {/* ========== our clients section ========== */}
 
         <section className="wrapper bg-light">
@@ -61,8 +57,8 @@ const Demo20: NextPage = () => {
 
         <section className="wrapper bg-light">
           <div className="container pt-10 pb-10">
-            <h2 className="mb-3 text-center">Core Values</h2>
-            <div className="row">
+            <h2 className="mb-3 text-center">{t('core-values-title')}</h2>
+            <div className="row align-items-center">
               <div className="col-12 col-lg-6">
                 <ul className="icon-list bullet-bg bullet-soft-primary mb-0">
                   {coreValues.map((key) => {

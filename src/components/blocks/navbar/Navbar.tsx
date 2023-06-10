@@ -96,6 +96,12 @@ const Navbar: FC<NavbarProps> = (props) => {
               <Link href="/products" className="nav-link">
                 {t('Products')}
               </Link>
+            </li>
+
+            {/* <li className="nav-item dropdown">
+              <Link href="/products" className="nav-link">
+                {t('Products')}
+              </Link>
               <ul className="dropdown-menu">
                 {pages.map(({ id, title, children }) => {
                   return (
@@ -108,7 +114,7 @@ const Navbar: FC<NavbarProps> = (props) => {
 
                 <ListItemLink href="/pricing" title="Pricing" linkClassName="dropdown-item" />
               </ul>
-            </li>
+            </li> */}
 
             <li className="nav-item dropdown">
               <Link href="/media" className="nav-link">

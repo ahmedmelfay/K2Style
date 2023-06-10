@@ -35,7 +35,7 @@ const Development = () => {
       <main className="content-wrapper">
         {/* ========== hero section ========== */}
         <section
-          className="wrapper bg-image bg-overlay bg-dark custom-hero3 bgs"
+          className="wrapper bg-image bg-overlay bg-dark custom-hero3"
           style={{ marginTop: 0, backgroundColor: '#4c4d5b' }}
         >
           <div className="container pt-7 pt-md-11 pb-6"></div>
