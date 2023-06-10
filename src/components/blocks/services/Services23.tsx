@@ -1,96 +1,44 @@
 import { FC } from 'react';
 import NextLink from 'components/reuseable/links/NextLink';
+import { useTranslations } from 'next-intl';
+import Accordion from 'components/reuseable/accordion';
 
 const Services23: FC = () => {
+  const t = useTranslations();
+
+  const accordions = [
+    { no: 'One', expand: true, heading: t('strategy-1-title'), body: t('strategy-1-desc') },
+    { no: 'Two', expand: false, heading: t('strategy-2-title'), body: t('strategy-2-desc') },
+    { no: 'Three', expand: false, heading: t('strategy-3-title'), body: t('strategy-3-desc') },
+    { no: 'Four', expand: false, heading: t('strategy-4-title'), body: t('strategy-4-desc') }
+  ];
   return (
     <section className="wrapper bg-light">
-      <div className="container py-15 py-md-17">
+      <div className="container py-12">
         <div className="row text-center mb-10">
           <div className="col-md-10 col-lg-9 col-xxl-8 mx-auto">
-            <h2 className="fs-16 text-uppercase text-muted mb-3">What We Do?</h2>
+            <h2 className="fs-16 text-uppercase text-muted mb-3">{t('strategic-plan-title')}</h2>
             <h3 className="display-3 px-xl-10 mb-0">
-              The service we offer is specifically designed to meet your needs.
+              {/* The service we offer is specifically designed to meet your needs. */}
+              {t('strategic-plan-subtitle')}
             </h3>
           </div>
         </div>
 
-        <div className="row gx-lg-0 gy-10 mb-15 mb-md-17 align-items-center">
-          <div className="col-lg-6">
-            <figure className="rounded mb-0">
-              <img
-                alt=""
-                className="img-fluid"
-                src="/img/illustrations/ui4.png"
-                srcSet="/img/illustrations/ui4@2x.png 2x"
-              />
-            </figure>
-          </div>
-
-          <ColumnTwo title="Web Design" className="ms-auto" />
-        </div>
-
-        <div className="row gx-lg-0 gy-10 mb-15 mb-md-17 align-items-center">
-          <div className="col-lg-6 order-lg-2 ms-auto">
-            <figure className="rounded mb-0">
-              <img
-                alt=""
-                className="img-fluid"
-                src="/img/illustrations/ui1.png"
-                srcSet="/img/illustrations/ui1@2x.png 2x"
-              />
-            </figure>
-          </div>
-
-          <ColumnTwo title="Mobile Development" />
-        </div>
-
         <div className="row gx-lg-0 gy-10 align-items-center">
-          <div className="col-lg-6">
-            <figure className="rounded mb-0">
-              <img
-                alt=""
-                className="img-fluid"
-                src="/img/illustrations/ui5.png"
-                srcSet="/img/illustrations/ui5@2x.png 2x"
-              />
+          <div className="col-lg-6 col-12">
+            <figure className="rounded mx-md-10">
+              <img src="/img/photos/g12.jpg" srcSet="/img/photos/g12@2x.jpg 2x" alt="" />
             </figure>
           </div>
-
-          <ColumnTwo title="SEO Optimization" className="ms-auto" />
+          <div className="accordion accordion-wrapper col-12 col-lg-6" id="accordionExample">
+            {accordions.map((item) => (
+              <Accordion type="plain" key={item.no} {...item} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
-  );
-};
-
-type ColumnTwoProps = { title: string; className?: string };
-const ColumnTwo = ({ title, className = '' }: ColumnTwoProps) => {
-  // list data
-  const list = [
-    'Aenean quam ornare curabitur blandit.',
-    'Nullam quis risus eget urna mollis ornare leo.',
-    'Etiam porta euismod mollis natoque ornare.'
-  ];
-
-  return (
-    <div className={`col-lg-5 ${className}`}>
-      <h3 className="fs-28 mb-3">{title}</h3>
-      <p>
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus
-        ac facilisis in, egestas eget quam. Praesent commodo cursus magna risus varius.
-      </p>
-
-      <ul className="icon-list bullet-bg bullet-soft-primary">
-        {list.map((item) => (
-          <li key={item}>
-            <i className="uil uil-check" />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-
-      <NextLink title="More Details" href="#" className="btn btn-soft-primary rounded-pill mt-2 mb-0" />
-    </div>
   );
 };
 

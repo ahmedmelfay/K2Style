@@ -87,6 +87,12 @@ const Navbar: FC<NavbarProps> = (props) => {
           <ul className="navbar-nav">
             {/*  ===================== products nav item  ===================== */}
             <li className="nav-item dropdown">
+              <Link href="/" className="nav-link">
+                {t('Home')}
+              </Link>
+            </li>
+
+            <li className="nav-item dropdown">
               <Link href="/products" className="nav-link">
                 {t('Products')}
               </Link>
@@ -119,39 +125,6 @@ const Navbar: FC<NavbarProps> = (props) => {
                 {t('Contact Us')}
               </Link>
             </li>
-
-            {/* <li className="nav-item dropdown">
-              <DropdownToggleLink title="Projects" className="nav-link dropdown-toggle" />
-
-              <div className="dropdown-menu dropdown-lg">
-                <div className="dropdown-lg-content">
-                  {projectsNavigation.map(({ title, children }, i) => (
-                    <div key={title + i}>
-                      <h6 className="dropdown-header">{title}</h6>
-                      <ul className="list-unstyled">{renderLinks(children)}</ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </li>
-
-            <li className="nav-item dropdown">
-              <DropdownToggleLink title="Blog" className="nav-link dropdown-toggle" />
-
-              <ul className="dropdown-menu">
-                {blogsNavigation.map(({ id, url, title, children }) => {
-                  if (!url && children) {
-                    return (
-                      <li className="dropdown dropdown-submenu dropend" key={id}>
-                        <DropdownToggleLink title="Blog Posts" />
-                        <ul className="dropdown-menu">{renderLinks(children)}</ul>
-                      </li>
-                    );
-                  }
-                  return <ListItemLink key={id} href={url} title={title} linkClassName="dropdown-item" />;
-                })}
-              </ul>
-            </li> */}
           </ul>
 
           {/* ============= show contact info in the small device sidebar ============= */}

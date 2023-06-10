@@ -32,6 +32,7 @@ import About31 from './About31';
 import About32 from './About32';
 import About33 from './About33';
 import About34 from './About34';
+import CustomAbout from './CustomAbout';
 
 export {
   About1,
@@ -67,5 +68,6 @@ export {
   About31,
   About32,
   About33,
-  About34
+  About34,
+  CustomAbout
 };

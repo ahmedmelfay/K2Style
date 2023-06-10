@@ -23,9 +23,15 @@ const Hero20: FC<Props> = ({ videoSrc, rotations, title }) => {
         <div className="container text-center">
           <div className="row">
             <div className="col-lg-8 col-xl-6 text-center text-white mx-auto">
-              {rotations ? (
+              {rotations && rotations.length !== 1 ? (
                 <h1 className="display-1 fs-54 text-white mb-5">
                   <span className="rotator-zoom">{rotations.toString()}</span>
+                </h1>
+              ) : null}
+
+              {rotations?.length === 1 ? (
+                <h1 className="display-1 fs-54 text-white mb-5">
+                  <span>{rotations.toString()}</span>
                 </h1>
               ) : null}
 
