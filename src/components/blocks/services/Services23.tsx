@@ -2,10 +2,11 @@ import { FC } from 'react';
 import NextLink from 'components/reuseable/links/NextLink';
 import { useTranslations } from 'next-intl';
 import Accordion from 'components/reuseable/accordion';
+import { useRouter } from 'next/router';
 
 const Services23: FC = () => {
   const t = useTranslations();
-
+  const { locale } = useRouter();
   const accordions = [
     { no: 'One', expand: true, heading: t('strategy-1-title'), body: t('strategy-1-desc') },
     { no: 'Two', expand: false, heading: t('strategy-2-title'), body: t('strategy-2-desc') },
@@ -31,7 +32,10 @@ const Services23: FC = () => {
               <img src="/img/photos/g12.jpg" srcSet="/img/photos/g12@2x.jpg 2x" alt="" />
             </figure>
           </div>
-          <div className="accordion accordion-wrapper col-12 col-lg-6" id="accordionExample">
+          <div
+            className={`accordion accordion-wrapper col-12 col-lg-6 ${locale === 'ar' && 'rtl'}`}
+            id="accordionExample"
+          >
             {accordions.map((item) => (
               <Accordion type="plain" key={item.no} {...item} />
             ))}

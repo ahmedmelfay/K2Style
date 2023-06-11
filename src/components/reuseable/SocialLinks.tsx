@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { FC } from 'react';
 
 // ========================================================
@@ -11,10 +12,17 @@ const links = [
 ];
 
 const SocialLinks: FC<SocialLinksProps> = ({ className = 'nav social social-white mt-4' }) => {
+  const { locale } = useRouter();
   return (
     <nav className={className}>
       {links.map(({ id, icon, url }) => (
-        <a href={url} key={id} target={icon.includes('uil-envelope') ? '_self' : '_blank'} rel="noreferrer">
+        <a
+          href={url}
+          key={id}
+          target={icon.includes('uil-envelope') ? '_self' : '_blank'}
+          rel="noreferrer"
+          style={locale === 'ar' ? { margin: '0 0 0 0.7rem' } : { margin: '0 0.7rem 0 0' }}
+        >
           <i className={icon} />
         </a>
       ))}

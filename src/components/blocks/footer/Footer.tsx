@@ -5,12 +5,14 @@ import NextLink from 'components/reuseable/links/NextLink';
 import footerNav from 'data/footer';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const Footer: FC = () => {
   const t = useTranslations();
+  const { locale } = useRouter();
   return (
     <>
-      <footer className="bg-dark text-inverse">
+      <footer className={`bg-dark text-inverse ${locale === 'ar' && 'rtl'}`}>
         <div className="container py-13 py-md-15">
           <div className="row gy-6 gy-lg-0">
             <div className="col-md-4 col-lg-3">
@@ -54,7 +56,10 @@ const Footer: FC = () => {
             <div className="col-md-4 col-lg-3">
               <div className="widget">
                 <h4 className="widget-title text-white mb-3">{t('learn-more')}</h4>
-                <ul className="list-unstyled text-reset mb-0">
+                <ul
+                  className="list-unstyled text-reset mb-0"
+                  style={locale === 'ar' ? { padding: '0 0 0 40px' } : { padding: '0 40px 0 0' }}
+                >
                   {footerNav.map(({ title, url }) => (
                     <li key={title}>
                       <NextLink title={t(title)} href={url} />

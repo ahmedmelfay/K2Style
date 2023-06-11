@@ -7,11 +7,12 @@ import PageProgress from 'components/common/PageProgress';
 // import ContactForm from 'components/common/ContactForm';
 // import NextLink from 'components/reuseable/links/NextLink';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
 // -------- data -------- //
 
 const Contact: NextPage = () => {
   const t = useTranslations();
-
+  const { locale } = useRouter();
   const breadcrumb = [
     { id: 1, title: t('url-home'), url: '/' },
     { id: 2, title: t('url-contact'), url: '#' }
@@ -67,11 +68,11 @@ const Contact: NextPage = () => {
                       </div>
                     </div>
 
-                    <div className="col-lg-6">
+                    <div className={`col-lg-6 ${locale === 'ar' && 'rtl'}`}>
                       <div className="p-10 p-md-11 p-lg-14">
                         <div className="d-flex flex-row">
                           <div>
-                            <div className="icon text-primary fs-28 me-4 mt-n1">
+                            <div className={`icon text-primary fs-28 ${locale === 'ar' ? 'ms-4' : 'me-4'} mt-n1`}>
                               <i className="uil uil-location-pin-alt" />
                             </div>
                           </div>
@@ -87,7 +88,7 @@ const Contact: NextPage = () => {
 
                         <div className="d-flex flex-row">
                           <div>
-                            <div className="icon text-primary fs-28 me-4 mt-n1">
+                            <div className={`icon text-primary fs-28 ${locale === 'ar' ? 'ms-4' : 'me-4'} mt-n1`}>
                               <i className="uil uil-phone-volume" />
                             </div>
                           </div>
@@ -110,7 +111,7 @@ const Contact: NextPage = () => {
 
                         <div className="d-flex flex-row" style={{ marginTop: '16px' }}>
                           <div>
-                            <div className="icon text-primary fs-28 me-4 mt-n1">
+                            <div className={`icon text-primary fs-28 ${locale === 'ar' ? 'ms-4' : 'me-4'} mt-n1`}>
                               <i className="uil uil-envelope" />
                             </div>
                           </div>

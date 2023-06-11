@@ -10,6 +10,7 @@ import NextLink from 'components/reuseable/links/NextLink';
 // -------- custom hook -------- //
 import useIsotope from 'hooks/useIsotope';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
 // -------- data -------- //
 
 const Products: NextPage = () => {
@@ -54,35 +55,35 @@ const Products: NextPage = () => {
     {
       id: 6,
       type: 'cold-work-tool-steel',
-      category: t('products-engineering-steel'),
+      category: t('products-cold-work-tool-steel'),
       title: 'X210Cr12 D3(W.Nr1.6582)',
       image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
     },
     {
       id: 7,
       type: 'cold-work-tool-steel',
-      category: t('products-engineering-steel'),
+      category: t('products-cold-work-tool-steel'),
       title: 'X210CrW12 D6(W.Nr1.2436)',
       image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
     },
     {
       id: 8,
       type: 'cold-work-tool-steel',
-      category: t('products-engineering-steel'),
+      category: t('products-cold-work-tool-steel'),
       title: 'X155CrVMo12.1 D2(W.Nr1.2479)',
       image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
     },
     {
       id: 9,
       type: 'cold-work-tool-steel',
-      category: t('products-engineering-steel'),
+      category: t('products-cold-work-tool-steel'),
       title: '60WCrV7	D6(W.Nr1.2436)',
       image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
     },
     {
       id: 10,
       type: 'cold-work-tool-steel',
-      category: t('products-engineering-steel'),
+      category: t('products-cold-work-tool-steel'),
       title: 'X45NiCrMo4 6F7(W.Nr1.2767)',
       image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
     },
@@ -117,6 +118,8 @@ const Products: NextPage = () => {
     { id: 5, title: t('products-steel-cutting-plastic-stamps'), value: '.steel-cutting-plastic-stamps' }
   ];
 
+  const { locale } = useRouter();
+
   return (
     <div className="page-frame bg-pale-primary">
       <PageProgress />
@@ -137,7 +140,7 @@ const Products: NextPage = () => {
           <div className="container pt-7 pt-md-11 pb-6"></div>
         </section>
 
-        <section className="wrapper bg-light">
+        <section className={`wrapper bg-light ${locale === 'ar' && 'rtl'}`}>
           <div className="container pt-10 pt-md-14">
             <div className="row">
               <div className="col-md-8 col-lg-7 col-xl-6 col-xxl-5">

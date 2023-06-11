@@ -9,11 +9,13 @@ import carouselBreakpoints from 'utils/carouselBreakpoints';
 // -------- data -------- //
 import { blogList3 } from 'data/blog';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
 
 type DList = { id: number; title: string };
 
 const CustomBlog: FC = () => {
   const t = useTranslations();
+  const { locale } = useRouter();
 
   const devList: DList[] = [
     { id: 1, title: '' },
@@ -48,7 +50,10 @@ const CustomBlog: FC = () => {
 
                     <div className="card-body p-6">
                       <div className="post-header">
-                        <h2 className="post-title h3 mt-1 mb-3" style={{ height: 92.4 }}>
+                        <h2
+                          className="post-title h3 mt-1 mb-3"
+                          style={{ height: 92.4, textAlign: locale === 'ar' ? 'right' : 'left' }}
+                        >
                           {t(`dev-${item.id}-title`)}
                         </h2>
                       </div>

@@ -12,13 +12,39 @@ import { Process13 } from 'components/blocks/process';
 import { Services23 } from 'components/blocks/services';
 import PageProgress from 'components/common/PageProgress';
 import { useTranslations } from 'next-intl';
+import { Team6 } from 'components/blocks/team';
+import { teams } from 'data/demo-11';
+import { TeamCard3 } from 'components/reuseable/team-cards';
+import { useRouter } from 'next/router';
 
 const Demo20: NextPage = () => {
   const coreValues: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
+  const ourTeam = [
+    {
+      id: 1,
+      name: 'Eng.Mohamed Elgabry',
+      designation: 'CEO',
+      image: { '1x': '/img/team/team-1.jpg', '2x': '/img/avatars/t1@2x.jpg 2x' }
+    },
+    {
+      id: 2,
+      name: 'Mr.Aymen Gareep',
+      designation: 'COO',
+      image: { '1x': '/img/team/team-2.jpg', '2x': '/img/avatars/t2@2x.jpg 2x' }
+    },
+    {
+      id: 3,
+      name: 'Ms.Safiya Kadery',
+      designation: 'CFO',
+      image: { '1x': '/img/team/team-3.jpg', '2x': '/img/avatars/t3@2x.jpg 2x' }
+    }
+  ];
+
   // lighbox hook called
   useLightBox();
   const t = useTranslations();
+  const { locale } = useRouter();
   return (
     <div className="page-frame bg-pale-primary">
       <PageProgress />
@@ -57,15 +83,18 @@ const Demo20: NextPage = () => {
 
         <section className="wrapper bg-light">
           <div className="container pt-10 pb-10">
-            <h2 className="mb-3 text-center">{t('core-values-title')}</h2>
-            <div className="row align-items-center">
-              <div className="col-12 col-lg-6">
+            <h2 className="mb-10 text-center">{t('core-values-title')}</h2>
+            <div className={`row align-items-center mb-10 `}>
+              <div className={`col-12 col-lg-6 ${locale === 'ar' && 'rtl'}`}>
                 <ul className="icon-list bullet-bg bullet-soft-primary mb-0">
                   {coreValues.map((key) => {
                     return (
                       <li key={`core-values-${key}`}>
                         <span>
-                          <i className="uil uil-check" />
+                          <i
+                            className="uil uil-check"
+                            style={locale === 'ar' ? { right: -32, left: 'unset' } : { left: 0 }}
+                          />
                         </span>
                         <span>{t(`core-values-${key}`)}</span>
                       </li>
@@ -83,6 +112,20 @@ const Demo20: NextPage = () => {
         </section>
 
         <Services23 />
+
+        <section className="wrapper bg-light">
+          <div className="container pt-10 pb-10">
+            <h2 className="mb-10 text-center">{t('our-team')}</h2>
+
+            <div className="row grid-view gx-md-8 gx-xl-10 gy-8 gy-lg-0 mb-10">
+              {ourTeam.map((item) => (
+                <div className="col-md-4 col-sm-12" key={item.id}>
+                  <TeamCard3 {...item} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* ========== footer section ========== */}
