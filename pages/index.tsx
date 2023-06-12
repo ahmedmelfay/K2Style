@@ -64,16 +64,8 @@ const Demo20: NextPage = () => {
         {/* ========== hero section ========== */}
         <Hero20
           rotations={[t('brandname')]}
-          // title="We are a digital agency specializing in web design, mobile development and seo optimization."
           title={t('our-vision')}
         />
-
-        {/* ========== what we do section ========== */}
-
-        {/* ========== working process section ========== */}
-        {/* <Process13 /> */}
-
-        {/* ========== our clients section ========== */}
 
         <section className="wrapper bg-light">
           <div className="container pt-15 pt-md-17 pb-10">
@@ -104,7 +96,7 @@ const Demo20: NextPage = () => {
               </div>
               <div className="col-lg-6 col-12">
                 <figure className="rounded mx-md-10">
-                  <img src="/img/photos/g12.jpg" srcSet="/img/photos/g12@2x.jpg 2x" alt="" />
+                  <img src="/img/core-values.jpg" alt="Core Values" />
                 </figure>
               </div>
             </div>

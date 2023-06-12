@@ -22,91 +22,91 @@ const Products: NextPage = () => {
       type: 'engineering-steel',
       category: t('products-engineering-steel'),
       title: '16MnCr 5 (W.Nr1.7139 )',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/p-3.jpg' }
     },
     {
       id: 2,
       type: 'engineering-steel',
       category: t('products-engineering-steel'),
       title: '34lCrAlNi7 (W.Nr1.8550)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/p-2.jpg' }
     },
     {
       id: 3,
       type: 'engineering-steel',
       category: t('products-engineering-steel'),
       title: '41Cr4 (W.Nr1.7035)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/p-4.jpg' }
     },
     {
       id: 4,
       type: 'engineering-steel',
       category: t('products-engineering-steel'),
       title: '42CrMo4 (W.Nr1.7252)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/p-16.jpg' }
     },
     {
       id: 5,
       type: 'engineering-steel',
       category: t('products-engineering-steel'),
       title: '34CrNiMo6	(W.Nr1.6582)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/p-5.jpg' }
     },
     {
       id: 6,
       type: 'cold-work-tool-steel',
       category: t('products-cold-work-tool-steel'),
       title: 'X210Cr12 D3(W.Nr1.6582)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/D31.jpg' }
     },
     {
       id: 7,
       type: 'cold-work-tool-steel',
       category: t('products-cold-work-tool-steel'),
       title: 'X210CrW12 D6(W.Nr1.2436)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/CW2.webp' }
     },
     {
       id: 8,
       type: 'cold-work-tool-steel',
       category: t('products-cold-work-tool-steel'),
       title: 'X155CrVMo12.1 D2(W.Nr1.2479)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/CW3.webp' }
     },
     {
       id: 9,
       type: 'cold-work-tool-steel',
       category: t('products-cold-work-tool-steel'),
       title: '60WCrV7	D6(W.Nr1.2436)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/p-21.jpg' }
     },
     {
       id: 10,
       type: 'cold-work-tool-steel',
       category: t('products-cold-work-tool-steel'),
       title: 'X45NiCrMo4 6F7(W.Nr1.2767)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/CW4.jpg' }
     },
     {
       id: 11,
       type: 'hot-work-tool-steel',
       category: t('products-hot-work-tool-steel'),
       title: 'X40CrMoV5.1	H13(W.Nr1.2344)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/HW1.jpg' }
     },
     {
       id: 12,
       type: 'hot-work-tool-steel',
       category: t('products-hot-work-tool-steel'),
       title: 'X32CrMoV3.3	H10(W.Nr1.2365)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/p-1.jpg' }
     },
     {
       id: 13,
       type: 'steel-cutting-plastic-stamps',
       category: t('products-steel-cutting-plastic-stamps'),
       title: '40CrMmMo58 P20+S (W.Nr1.2312)',
-      image: { width: 1300, height: 1262, url: '/img/photos/cs16.jpg' }
+      image: { width: 1300, height: 1262, url: '/img/products/p-37.jpg' }
     }
   ];
 

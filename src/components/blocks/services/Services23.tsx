@@ -29,7 +29,7 @@ const Services23: FC = () => {
         <div className="row gx-lg-0 gy-10 align-items-center">
           <div className="col-lg-6 col-12">
             <figure className="rounded mx-md-10">
-              <img src="/img/photos/g12.jpg" srcSet="/img/photos/g12@2x.jpg 2x" alt="" />
+              <img src="/img/strategic-plan.jpg" alt="Strategic Plan" />
             </figure>
           </div>
           <div
