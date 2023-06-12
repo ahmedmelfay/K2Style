@@ -14,15 +14,15 @@ const CustomAbout: FC = () => {
   const accordions = [
     {
       no: 'One',
-      expand: true,
-      heading: t('our-mission-title'),
-      body: t('our-mission')
+      expand: false,
+      heading: t('our-vision-title'),
+      body: t('our-vision')
     },
     {
       no: 'Two',
       expand: false,
-      heading: t('our-vision-title'),
-      body: t('our-vision')
+      heading: t('our-mission-title'),
+      body: t('our-mission')
     }
   ];
 
