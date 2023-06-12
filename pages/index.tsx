@@ -25,19 +25,19 @@ const Demo20: NextPage = () => {
       id: 1,
       name: 'Eng.Mohamed Elgabry',
       designation: 'CEO',
-      image: { '1x': '/img/team/team-1.jpg', '2x': '/img/avatars/t1@2x.jpg 2x' }
+      image: { '1x': '/img/team/team-1.jpg', '2x': '/img/team/team-1.jpg' }
     },
     {
       id: 2,
       name: 'Mr.Aymen Gareep',
       designation: 'COO',
-      image: { '1x': '/img/team/team-2.jpg', '2x': '/img/avatars/t2@2x.jpg 2x' }
+      image: { '1x': '/img/team/team-2.jpg', '2x': '/img/team/team-2.jpg' }
     },
     {
       id: 3,
       name: 'Ms.Safiya Kadery',
       designation: 'CFO',
-      image: { '1x': '/img/team/team-3.jpg', '2x': '/img/avatars/t3@2x.jpg 2x' }
+      image: { '1x': '/img/team/team-3.jpg', '2x': '/img/team/team-3.jpg' }
     }
   ];
 
